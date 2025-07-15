@@ -6,18 +6,9 @@ from io import BytesIO
 import time
 import re
 
-# Selenium imports
-try:
-    from selenium import webdriver
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    from selenium.webdriver.firefox.options import Options
-    from selenium.webdriver.common.action_chains import ActionChains
-    from selenium.common.exceptions import TimeoutException, NoSuchElementException, WebDriverException
-    SELENIUM_AVAILABLE = True
-except ImportError:
-    SELENIUM_AVAILABLE = False
+
+SELENIUM_AVAILABLE = True
+
 
 def scrape_with_selenium(url, selector, click_selector=None):
     """
